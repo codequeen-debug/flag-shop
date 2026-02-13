@@ -165,201 +165,6 @@ p {
   color: var(--baby-blue-dark);
 }
 
-.cart-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.cart-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--white);
-  background: var(--baby-blue-dark);
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.cart-count.cart-count--visible {
-  opacity: 1;
-}
-
-.cart-trigger {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  color: var(--gray-700);
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.cart-trigger:hover {
-  color: var(--baby-blue-dark);
-}
-
-/* Cart drawer */
-.cart-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-
-.cart-overlay.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.cart-drawer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  max-width: 380px;
-  height: 100%;
-  background: var(--white);
-  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-}
-
-.cart-drawer.is-open {
-  transform: translateX(0);
-}
-
-.cart-drawer-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 20px 16px;
-  border-bottom: 1px solid var(--gray-100);
-  flex-shrink: 0;
-}
-
-.cart-drawer-title {
-  margin: 0;
-  font-size: 1.35rem;
-  color: var(--gray-800);
-}
-
-.cart-drawer-close {
-  background: none;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  color: var(--gray-600);
-  font-size: 1.25rem;
-  line-height: 1;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.cart-drawer-close:hover {
-  background: var(--gray-100);
-  color: var(--gray-800);
-}
-
-.cart-drawer-body {
-  flex: 1;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 16px 20px 20px;
-}
-
-.cart-items {
-  flex: 1;
-  min-height: 0;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--gray-100);
-  font-size: 0.95rem;
-}
-
-.cart-item:last-child {
-  border-bottom: none;
-}
-
-.cart-item-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.cart-item-name {
-  font-weight: 600;
-  color: var(--gray-800);
-}
-
-.cart-item-details {
-  font-size: 0.85rem;
-  color: var(--gray-600);
-  margin-top: 2px;
-}
-
-.cart-item-remove {
-  background: none;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  color: var(--gray-600);
-  font-size: 0.85rem;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
-  flex-shrink: 0;
-}
-
-.cart-item-remove:hover {
-  background: var(--gray-100);
-  color: var(--gray-800);
-}
-
-.cart-empty {
-  color: var(--gray-600);
-  margin: 24px 0;
-  text-align: center;
-}
-
-.cart-drawer-footer {
-  margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid var(--gray-100);
-}
-
-.cart-total {
-  margin: 0 0 12px;
-  font-size: 1.05rem;
-}
-
-.cart-checkout {
-  width: 100%;
-  padding: 12px 20px;
-}
-
 .banner {
   margin: 10px auto;
   display: grid;
@@ -387,7 +192,7 @@ p {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
-.flags {
+.plants {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -463,34 +268,8 @@ p {
   padding-top: 4px;
 }
 
-.flag-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin: 14px 16px 16px;
-}
-
-.flag-card-actions .buy-now,
-.flag-card-actions .add-to-cart {
-  flex: 1;
-  min-width: 100px;
-}
-
-.flag-card-actions .buy-now {
-  background: transparent;
-  color: var(--baby-blue-dark);
-  border: 2px solid var(--baby-blue-dark);
-}
-
-.flag-card-actions .buy-now:hover {
-  background: var(--baby-blue-pale);
-  color: var(--baby-blue-deep);
-  border-color: var(--baby-blue-deep);
-}
-
 .flag-card button {
-  margin: 0;
+  margin: 14px 16px 16px;
   align-self: center;
 }
 
@@ -532,23 +311,13 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: var(--gray-50);
   border-top: 1px solid var(--gray-100);
   border-bottom: 1px solid var(--gray-100);
-  background: var(--gray-50) url("../assets/bannerflags.jpg") center / cover no-repeat;
 }
 
 .news-letter-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.82);
-  pointer-events: none;
-}
-
-.news-letter-container h1,
-.news-letter-container .email-div {
-  position: relative;
-  z-index: 1;
+  display: none;
 }
 
 .news-letter-container .email-div input {
@@ -556,73 +325,6 @@ button:hover {
   border-radius: 8px;
   padding: 0 12px;
   background: var(--white);
-}
-
-/* Newsletter popup */
-.newsletter-popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-
-.newsletter-popup-overlay.newsletter-popup--visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.newsletter-popup {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 24px;
-  max-width: 360px;
-  width: 100%;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-  text-align: center;
-}
-
-.newsletter-popup h3 {
-  margin: 0 0 12px;
-  font-size: 1.25rem;
-  color: var(--gray-800);
-}
-
-.newsletter-popup-text {
-  margin: 0 0 20px;
-  font-size: 1rem;
-  color: var(--gray-700);
-  line-height: 1.5;
-}
-
-.newsletter-popup-overlay.newsletter-popup--error .newsletter-popup-text {
-  color: var(--gray-800);
-}
-
-.newsletter-popup-close {
-  width: 100%;
-  padding: 10px 20px;
-}
-
-.newsletter-popup-overlay .newsletter-popup {
-  animation: newsletter-pop-in 0.25s ease;
-}
-
-@keyframes newsletter-pop-in {
-  from {
-    transform: scale(0.92);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 footer {
