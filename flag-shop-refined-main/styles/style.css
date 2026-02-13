@@ -532,13 +532,23 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--gray-50);
   border-top: 1px solid var(--gray-100);
   border-bottom: 1px solid var(--gray-100);
+  background: var(--gray-50) url("../assets/bannerflags.jpg") center / cover no-repeat;
 }
 
 .news-letter-container::before {
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.82);
+  pointer-events: none;
+}
+
+.news-letter-container h1,
+.news-letter-container .email-div {
+  position: relative;
+  z-index: 1;
 }
 
 .news-letter-container .email-div input {
@@ -548,18 +558,71 @@ button:hover {
   background: var(--white);
 }
 
-.newsletter-message {
-  font-size: 0.9rem;
-  margin-left: 8px;
+/* Newsletter popup */
+.newsletter-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
-.newsletter-message--success {
-  color: var(--baby-blue-deep);
-  font-weight: 500;
+.newsletter-popup-overlay.newsletter-popup--visible {
+  opacity: 1;
+  visibility: visible;
 }
 
-.newsletter-message--error {
-  color: var(--gray-600);
+.newsletter-popup {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+.newsletter-popup h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  color: var(--gray-800);
+}
+
+.newsletter-popup-text {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.newsletter-popup-overlay.newsletter-popup--error .newsletter-popup-text {
+  color: var(--gray-800);
+}
+
+.newsletter-popup-close {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.newsletter-popup-overlay .newsletter-popup {
+  animation: newsletter-pop-in 0.25s ease;
+}
+
+@keyframes newsletter-pop-in {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 footer {
