@@ -26,5 +26,12 @@ flag-shop-refined/
  -assets/              # All images (flags, icons, banners)
  -README.md            # Project documentation(here)
 
+## Footer and Banner
+
+- Footer contains a visual banner displaying flags.
+
+- Our Footer is now fully responsive linking to youtube, linkedIn, X and Facebook.
+
+
 ## Live Link: 
 
