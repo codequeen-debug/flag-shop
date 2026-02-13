@@ -203,3 +203,16 @@
     if (e.target === overlay) hidePopup();
   });
 })();
+
+(function () {
+  var socialIds = ["twitter-btn", "linkedin-btn", "youtube-btn", "facebook-btn"];
+  
+  socialIds.forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener("click", function () {
+        console.log("Social media button clicked: " + id);
+      });
+    }
+  });
+})();
