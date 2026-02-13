@@ -34,5 +34,5 @@ flag-shop-refined/
 
 
 ## Live Link: 
-https://flagshop-refined.netlify.app/
+https://flag-shopp.netlify.app/
 
