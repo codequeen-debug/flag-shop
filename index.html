@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Favorite Flag Shop</title>
+    <link rel="icon" href="assets/SWE. 2026.png" type="image/x-icon" />
+
+    <script
+      src="https://kit.fontawesome.com/ae43ee1d0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="article-content">
+    <section class="navbar">
+      <img class="logo" src="assets/SWE. 2026.png" alt="Flag Shop" />
+      <h1 class="primary-font">Premium Flags</h1>
+      <nav class="primary-font">
+        <ul class="horizontal-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">About Us</a></li>
+          <li>
+            <button type="button" class="cart-link cart-trigger" id="cart-trigger" aria-label="View cart">
+              <i class="fa-solid fa-cart-shopping"></i> Cart
+              <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-drawer-header">
+        <h2 class="primary-font cart-drawer-title">Your Cart</h2>
+        <button type="button" class="cart-drawer-close" id="cart-close" aria-label="Close cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="cart-drawer-body">
+        <div id="cart-items" class="cart-items"></div>
+        <p id="cart-empty" class="cart-empty secondary-font">Your cart is empty.</p>
+        <div class="cart-drawer-footer">
+          <p class="cart-total secondary-font">Total: <strong id="cart-total">$0.00</strong></p>
+          <button type="button" class="cart-checkout" id="cart-checkout">Proceed to checkout</button>
+        </div>
+      </div>
+    </aside>
+    <section class="banner">
+      <div class="hero">
+        <h1 class="primary-font banner-title">
+          <span class="banner-line-1">From New College</span>
+          <span class="special-color"><br />to your home</span>
+        </h1>
+        <p class="secondary-font bottom-text">
+          <b>Quality You Can Rally Behind.</b> We don’t just sell fabric; we provide
+          <strong>symbols</strong> of identity, heritage, and pride. 
+          From high-durability outdoor ensigns to premium indoor flags, 
+          our flags are crafted to withstand the elements and the demands of daily use.
+          Our collection is curated for those who demand precision in every stitch. 
+          Find your colors and fly them high.
+        </p>
+      </div>
+      <div>
+        <img class="banner-image" src="assets/SWE. 2026.png" alt="" />
+      </div>
+    </section>
+    <section class="flags" id="our-flags">
+      <h2 class="primary-font">
+        <span class="special-color">Our </span>Flags
+      </h2>
+      <p
+        class="secondary-font"
+        style="font-size: large; padding: 10px; width: 60%"
+      >
+        Add a splash of color to your space with our vibrant flags! Whether you're looking
+        to showcase your national pride, celebrate a special event, or simply brighten up your decor,
+        our diverse collection has something for everyone.
+      </p>
+      <div class="cards">
+        <div class="flag-card">
+          <img src="assets/JAMAICAN-FLAG.jpg" alt="Flag of Jamaica" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF JAMAICA
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Jamaica" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Jamaica" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/CANADAIN-FLAG.jpg" alt="Flag of Canada" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF CANADA
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Canada" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Canada" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/JAPAN-FLAG.png" alt="Flag of Japan" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF JAPAN
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Japan" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Japan" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/GHANA_FLAG.png" alt="Flag of Ghana" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF GHANA
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Ghana" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Ghana" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/norway-flag.png" alt="Flag of Norway" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF NORWAY
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Norway" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Norway" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/BRAZIL-FLAG.jpg" alt="Flag of Brazil" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF BRAZIL
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Brazil" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Brazil" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/BRITISH-FLAG.png" alt="Flag of United Kingdom" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF UNITED KINGDOM
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of United Kingdom" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of United Kingdom" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/barbados.png" alt="Flag of Barbados" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF BARBADOS
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Barbados" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Barbados" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/IndianFLAG.jpg" alt="Flag of India" />
+          <h3 class="primary-font" style="font-size: 1.1rem">FLAG OF INDIA</h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of India" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of India" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="news-letter-container">
+      <h1 class="primary-font">
+        <span class="special-color">Premium Flag Crew </span>
+      </h1>
+      <div
+        style="display: flex; gap: 5px; align-items: center"
+        class="email-div secondary-font"
+      >
+        <input
+          type="email"
+          id="newsletter-email"
+          style="width: 300px; height: 40px"
+          placeholder="Enter your email"
+          aria-label="Email for newsletter"
+        />
+        <button type="button" id="newsletter-submit">Subscribe</button>
+      </div>
+    </section>
+    <div class="newsletter-popup-overlay" id="newsletter-popup-overlay" aria-hidden="true">
+      <div class="newsletter-popup" role="alertdialog" aria-labelledby="newsletter-popup-title" aria-describedby="newsletter-popup-text">
+        <h3 class="primary-font" id="newsletter-popup-title">Newsletter</h3>
+        <p id="newsletter-popup-text" class="secondary-font newsletter-popup-text"></p>
+        <button type="button" class="newsletter-popup-close" id="newsletter-popup-close">OK</button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-logo">
+        <img src="assets/SWE. 2026.png" alt="Flag Shop logo" />
+      </div>
+
+      <ul class="footer-menu secondary-font">
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Terms of Service</a></li>
+      </ul>
+
+      <div class="footer-social-links">
+        <a href="" aria-label="LinkedIn"><img src="assets/icon-linkedin.png" alt="" /></a>
+        <a href="" aria-label="Twitter"><img src="assets/icon-twitter.png" alt="" /></a>
+        <a href="" aria-label="Facebook"><img src="assets/icon-facebook.png" alt="" /></a>
+        <a href="" aria-label="YouTube"><img src="assets/icon-youtube.png" alt="" /></a>
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
