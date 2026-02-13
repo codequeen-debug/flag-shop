@@ -194,15 +194,9 @@
           aria-label="Email for newsletter"
         />
         <button type="button" id="newsletter-submit">Subscribe</button>
+        <span id="newsletter-message" class="newsletter-message" aria-live="polite"></span>
       </div>
     </section>
-    <div class="newsletter-popup-overlay" id="newsletter-popup-overlay" aria-hidden="true">
-      <div class="newsletter-popup" role="alertdialog" aria-labelledby="newsletter-popup-title" aria-describedby="newsletter-popup-text">
-        <h3 class="primary-font" id="newsletter-popup-title">Newsletter</h3>
-        <p id="newsletter-popup-text" class="secondary-font newsletter-popup-text"></p>
-        <button type="button" class="newsletter-popup-close" id="newsletter-popup-close">OK</button>
-      </div>
-    </div>
     <footer>
       <div class="footer-logo">
         <img src="assets/SWE. 2026.png" alt="Flag Shop logo" />
@@ -377,57 +371,22 @@
       (function () {
         var btn = document.getElementById("newsletter-submit");
         var input = document.getElementById("newsletter-email");
-        var overlay = document.getElementById("newsletter-popup-overlay");
-        var popupText = document.getElementById("newsletter-popup-text");
-        var popupClose = document.getElementById("newsletter-popup-close");
-
-        function isValidEmail(value) {
-          var at = value.indexOf("@");
-          if (at < 1) return false;
-          var dot = value.lastIndexOf(".");
-          if (dot <= at + 1 || dot === value.length - 1) return false;
-          return true;
-        }
-
-        function showPopup(message, isError) {
-          if (popupText) popupText.textContent = message;
-          if (overlay) {
-            overlay.classList.add("newsletter-popup--visible");
-            overlay.setAttribute("aria-hidden", "false");
-            if (isError) overlay.classList.add("newsletter-popup--error");
-            else overlay.classList.remove("newsletter-popup--error");
-          }
-        }
-
-        function hidePopup() {
-          if (overlay) {
-            overlay.classList.remove("newsletter-popup--visible");
-            overlay.setAttribute("aria-hidden", "true");
-          }
-        }
-
-        if (btn && input && overlay && popupText) {
+        var msg = document.getElementById("newsletter-message");
+        if (btn && input && msg) {
           btn.addEventListener("click", function () {
             var email = (input.value || "").trim();
             if (!email) {
-              showPopup("Please enter your email.", true);
+              msg.textContent = "Please enter your email.";
+              msg.className = "newsletter-message newsletter-message--error";
               console.log("Newsletter: Subscribe clicked but no email entered.");
               return;
             }
-            if (!isValidEmail(email)) {
-              showPopup("Please enter a valid email address (e.g. name@example.com).", true);
-              console.log("Newsletter: Invalid email format: " + email);
-              return;
-            }
-            showPopup("Thanks for subscribing!", false);
+            msg.textContent = "Thanks for subscribing!";
+            msg.className = "newsletter-message newsletter-message--success";
             input.value = "";
             console.log("Newsletter: Subscribed with email: " + email);
           });
         }
-        if (popupClose) popupClose.addEventListener("click", hidePopup);
-        if (overlay) overlay.addEventListener("click", function (e) {
-          if (e.target === overlay) hidePopup();
-        });
       })();
     </script>
   </body>
