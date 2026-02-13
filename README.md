@@ -14,5 +14,16 @@ Namely, linkedIn, X, facebook and Youtube buttons.
 ## Cart Logic
 - We have added a new and improved "Buy Now" button to our card layout.
 - Our cart features a remove button as well as a total cost count.
-  
+
+
+## Project Structure 
+flag-shop-refined/
+│
+├─ index.html           # Main HTML file containing page structure and JavaScript logic
+├─ style.css            # Styling, layout, and color schemes
+├─ scripts/
+│   └─ main.js          # Handles cart functionality, event listeners, and newsletter validation
+├─ assets/              # All images (flags, icons, banners)
+└─ README.md            # Project documentation(here)
 ## Live Link: 
+
